@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">workoutbuddy</string>
+    <string name="title_activity_main_menu">main_menu</string>
+    <string name="title_activity_bmr_calculator">bmr_calculator</string>
+</resources>
