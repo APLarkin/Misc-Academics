@@ -1,0 +1,10 @@
+Tool Finished with exit code 1
+Error in line Number:171: error: cannot find symbol
+						FinalMatrixOne[i][j] = sum;
+						^
+  symbol: variable FinalMatrixOne
+Error in line Number:197: error: cannot find symbol
+						FinalMatrixOne[i][j] = sum;
+						^
+  symbol: variable FinalMatrixOne
+2 errors

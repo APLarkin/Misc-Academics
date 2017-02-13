@@ -1,0 +1,20 @@
+Tool Finished with exit code 1
+Error in line Number:25: error: unreported exception IOException; must be caught or declared to be thrown
+	static ServerSocket ss = new ServerSocket(80);
+	                         ^
+Error in line Number:26: error: unreported exception IOException; must be caught or declared to be thrown
+	static Socket sock = ss.accept();
+	                              ^
+Error in line Number:27: error: unreported exception IOException; must be caught or declared to be thrown
+	static InputStream recvStream = sock.getInputStream();
+	                                                   ^
+Error in line Number:28: error: unreported exception IOException; must be caught or declared to be thrown
+	static OutputStream sendStream = sock.getOutputStream();
+	                                                     ^
+Error in line Number:83: error: unreported exception IOException; must be caught or declared to be thrown
+				byte[] button1 = Serializer(button);
+				                           ^
+Error in line Number:84: error: unreported exception IOException; must be caught or declared to be thrown
+				sendStream.write(button1);
+				                ^
+6 errors

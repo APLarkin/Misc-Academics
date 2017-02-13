@@ -1,0 +1,12 @@
+Tool Finished with exit code 1
+Error in line Number:16: error: cannot find symbol
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		^
+  symbol:   class NumberFormat
+  location: class miniproject
+Error in line Number:16: error: cannot find symbol
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		                        ^
+  symbol:   variable NumberFormat
+  location: class miniproject
+2 errors
