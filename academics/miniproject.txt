@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+    <canvas width="400" height="400" id="canvas" style="border:1px solid black"></canvas>
+	<br/>
+	<!-- counts time -->
+	<b id="iter2"></b>.<b id="iter"></b>
+	<br/>
+	Boxes remaining: <b id="boxes"></b>
+	<br/>
+	Current score: <b id="score"></b>
+    <script>
+	var boxNum = 10;
+	document.getElementById("boxes").innerHTML = boxNum;
+	document.getElementById("score").innerHTML = score;
+	var cobj = document.getElementById('canvas');
+    var canvas = cobj.getContext('2d');
+	var score = 0;
+	var time = {};
+	var ms = {};
+	var stop = false;
+	
+	cobj.addEventListener('click', function(){
+		var x = event.pageX;
+		var y = event.pageY;
+<!--	 alert(time+ " " + ms); -->
+<!--	 alert(x + "+" + y); -->
+		//The below is essentially complete -- I  just can't figure out how to detect when the box that is generated is actually clicked.
+<!--	if(some condition to detect clicks on a box && stop == false)
+<!--	{ -->
+			//Update number of boxes
+<!--		boxNum = boxNum-1;	-->
+<!--		document.getElementById("boxes").innerHTML = boxNum; -->
+			//Possible scores
+<!--		if(time < 1) -->
+<!--		{ -->
+<!--			score+=10;				
+<!--		} -->
+<!--		else if(time > 1 && time < 3) -->
+<!--		{ -->
+<!--			score+=5;
+<!--		} -->
+<!--		else if(time > 3 && time < 5) -->
+<!--		{ -->
+<!--			score+=2;
+<!--		} -->
+<!--		else if(time > 5) -->
+<!--		{ -->
+<!--			score+=0;
+<!--		} -->
+			//Clear canvas, generate new box, restart counter.
+<!--		if(boxNum != 0)
+<!--		{ -->
+<!--			context.clearRect(0,0,cobj.width, cobj.height); -->
+<!--			generateBox(); -->
+<!--			restartCounter(); -->
+<!--		} -->
+			//Puts a halt to all functions.
+<!--		else if(boxNum == 0) -->
+<!--		{ -->
+<!--			stop = true; -->
+<!--		} -->
+			//Updates the score.
+<!--		document.getElementById("score").innerHTML = score; -->
+<!--	}-->
+	}, false);
+	
+	function generateBox(){
+		// random variables so box doesn't exceed the size of the canvas
+		var x = Math.floor(Math.random()*350) + 1;
+		var y = Math.floor(Math.random()*350) + 1;
+	
+		// box appears at random vars x and y
+		canvas.fillStyle = 'green';
+		canvas.fillRect(x,y,50,50);
+	}
+	generateBox();
+	//I feel like this is desyncing but I cannot tell with my own eye
+	function restartCounter()
+	{
+		var iter = 0;
+		function counter() {
+			if(stop == true)
+			{
+				return;
+			}
+			document.getElementById('iter').innerHTML = iter;
+			setTimeout(counter, 100);
+			ms = iter;
+			iter++;
+			if(iter >= 10)
+			{
+				iter=0;
+			}
+		}
+		counter();
+		var iter2 = 0;
+		function counter2() {
+			if(stop == true)
+			{
+				return;
+			}
+			document.getElementById('iter2').innerHTML = iter2;
+			time = iter2;
+			iter2++;
+			setTimeout(counter2, 1000);
+		}
+		counter2();	
+	}
+	restartCounter();
+	
+	</script>
+</body>
+</html>

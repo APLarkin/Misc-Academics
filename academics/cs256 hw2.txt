@@ -1,0 +1,33 @@
+1a) font-size : 10px; 
+1b) font-size : 3em;
+1c) font-size : 16pt;
+1d) font-size : .5in;
+1e) font-size : 200%;
+1f) color : rgb(0,200,150);
+1g) color : rgb(25%, 50%, 100%);
+1h) color : #FFA025;
+2)
+
+h1 { 
+	font-weight: bold;
+	font-size : 150%;
+	letter-spacing: .75em;
+	font-family: Verdana, Arial, sans-serif;
+	word-spacing: 1em;
+	text-align;: center;
+	text-transform: capitalize;
+	background: #a9a9a9;
+	color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}
+h1:hover {
+	background: yellow;
+	color: black;
+}
+3a) p {}
+3b) p,b,i {}
+3c) ol > ol {}
+3d) .highlighted {}
+3e) p.highlighted {}

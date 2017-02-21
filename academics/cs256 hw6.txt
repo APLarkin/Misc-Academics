@@ -1,0 +1,9 @@
+1a) (ENGL|ENMO|ENWI|ENGE)\s[1-9][0-9][0-9]\s[A-Z]
+1b) [A-Z][A-Z]GE\s[1-9][0-9][0-9]\s[A-Z]
+2) (HHHHHHH+|TTTTTTT+)
+3) \$[0-9]??[0-9][0-9][0-9](\.[0-9][0-9]|$)
+4) \b([a-zA-Z])+(?=[0-9]*\b)
+5) "\b\w+\s*\w+\b"
+6) String string = "ab,cd efgh; ij";
+String[] split =  string.split("[^\\w]");
+7)((\w*)\s*=\s*\1\s*\+\s*[0-9]*\s*;?)
