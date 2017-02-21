@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Some words</title>
+    <meta charset="utf-8" />    
+</head>
+<body>
+    <div class="vocab">
+        <div class="word">Water</div>
+        <div class="def">Stuff that is wet.</div>
+    </div>
+
+    <div class="vocab">
+        <div class="word">Sand</div>
+        <div class="def">Stuff you find near a lot of water.
+            It can hurt your feet if you walk on it when it's too hot.
+        </div>
+    </div>
+
+    <div class="vocab">
+        <div class="word">Tree</div>
+        <div class="def">Big leafy thing</div>
+    </div>
+<script>
+
+var word = document.getElementsByClassName("word");
+
+function WORK(){
+	for(var i = 0, iLen = word.length; i<iLen; i++)
+	{
+		<!--word[i].style.border="5px"; this does not work-->
+		<!--word[i].style.borderStyle="dashed"; this also does not work-->
+		word[i].style.padding="20px 20px 20px 20px";
+		word[i].style.margin="20px 20px 20px 20px";
+		word[i].style.backgroundColor='purple';
+		word[i].setAttribute("align", "center");
+		word[i].setAttribute("onclick", "Click()");
+		word[i].setAttribute("onmouseover", "MouseOver()");
+		word[i].setAttribute("onmouseout", "MouseAway()");
+		<!-- word[i].setAttribute("id", (i+1).toString()); it took me so long before i realized i could do this, but now I can't think of how to use it to replace all this shit -->
+	}
+}
+
+function MouseOver()
+{
+	for(var i = 0, iLen = word.length; i<iLen; i++)
+	{
+		word[i].style.backgroundColor='yellow';
+	}
+}
+function MouseAway()
+{
+	for(var i = 0, iLen = word.length; i<iLen; i++)
+	{
+		word[i].style.backgroundColor='purple';
+	}
+}
+window.onload=function(){
+	var def = document.getElementsByClassName("def");
+	
+	for(var j = 0, jLen = def.length; j<jLen; j++)
+	{
+		def[j].style.visibility='hidden';
+		def[j].setAttribute("align", "center");
+	}
+}
+var isHidden = true;
+function Click(){
+	var def = document.getElementsByClassName("def");
+	if(isHidden==true)
+	{
+		for(var j = 0, jLen = def.length; j<jLen; j++)
+		{
+			def[j].style.visibility='visible';
+		}
+		isHidden = false;
+	}
+	else if(isHidden==false)
+	{
+		for(var j = 0, jLen = def.length; j<jLen; j++)
+		{
+			def[j].style.visibility='hidden';
+		}
+		isHidden = true;
+	}
+}
+</script>
+
+<input type="button" value="click" id="button" onclick="WORK()">
+</body>
+</html>

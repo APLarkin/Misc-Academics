@@ -1,0 +1,6 @@
+div:hover {
+
+	& p {
+		background: yellow;
+	}
+}
