@@ -1,10 +1,9 @@
 <<<<<<< HEAD
 import java.util.List;
 
-//this is fucking annoying
+//this is ******* annoying
 //add and to-string works if only one item is added
-//then it goes to shit with null pointer exceptions and blackscreens everywhere
-//after three days of being frustrated i've given up
+//then it goes to **** with null pointer exceptions and blackscreens everywhere
 
 public class CicularLinkedList
 {
